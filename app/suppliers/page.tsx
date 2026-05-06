@@ -5,9 +5,9 @@ import { StepFlow } from "@/components/StepFlow";
 import { SupplierForm } from "./SupplierForm";
 
 export const metadata: Metadata = {
-  title: "B2B Supplier — Adaptive Accessories | Antami",
+  title: "B2B Supplier: Adaptive Clothing Accessories | Antami",
   description:
-    "Antami supplies adaptive clothing accessories — magnetic zippers, clothes magnets, and velcro — to hospitals, special needs centres, and clothing brands across the UAE.",
+    "Antami supplies adaptive clothing accessories to hospitals, special needs centres, and clothing brands across the UAE.",
 };
 
 const clients = [
@@ -27,31 +27,31 @@ const clients = [
     icon: "👔",
     title: "Clothing Brands",
     description:
-      "Existing brands looking to launch an adaptive line or retrofit current styles with accessible fastenings — without starting from scratch.",
+      "Existing brands looking to launch an adaptive line or retrofit current styles with accessible fastenings, without starting from scratch.",
   },
 ];
 
 const products = [
   {
-    name: "MagZip — Magnetic Zipper",
-    icon: "🔗",
-    description:
-      "A magnetic zipper system that snaps closed with one hand and no fine motor precision. Drop it in place and it locks. Available in multiple sizes for jackets, bags, and garments.",
-    highlight: "One-handed operation",
-  },
-  {
-    name: "Clothes Magnets",
+    name: "Adaptive Clothing Accessories",
     icon: "🧲",
     description:
-      "High-strength flat magnets that replace buttons, snaps, and hooks invisibly. The outside of the garment looks unchanged — the closure is fully magnetic underneath.",
-    highlight: "Invisible adaptation",
+      "A full range of adaptive components (magnetic zippers, hidden magnetic closures, discreet velcro panels, and easy-grip pulls) supplied at scale for your garments.",
+    highlight: "Made for garments",
   },
   {
-    name: "Velcro Closures",
-    icon: "◈",
+    name: "Custom Specifications",
+    icon: "📐",
     description:
-      "Industrial-grade hook-and-loop fasteners sized and cut for garment use. Ideal for open-back designs, side openings, and any garment that needs a fast, secure, and adjustable close.",
-    highlight: "Fast & adjustable",
+      "Tell us the use case (patient gowns, school uniforms, retail collections) and we'll match the right closures, sizes, and finishes for your line.",
+    highlight: "Tailored to your line",
+  },
+  {
+    name: "Bulk Supply",
+    icon: "📦",
+    description:
+      "Reliable volumes for hospitals, centres, and brands. Consistent quality, predictable lead times, and direct delivery to your facility or production partner.",
+    highlight: "Consistent at scale",
   },
 ];
 
@@ -86,11 +86,11 @@ export default function SuppliersPage() {
             className="text-4xl sm:text-5xl lg:text-6xl text-white mb-6 max-w-3xl"
             style={{ fontFamily: "Helony, Georgia, serif" }}
           >
-            Adaptive accessories,{" "}
+            Adaptive clothing accessories,{" "}
             <GradientText>supplied at scale</GradientText>
           </h1>
           <p className="text-white/70 text-xl max-w-xl leading-relaxed mb-8">
-            We supply magnetic zippers, clothes magnets, and velcro closures to hospitals, special needs centres, and clothing brands — so your organisation can offer adaptive options without the R&amp;D.
+            We supply adaptive clothing accessories to hospitals, special needs centres, and clothing brands, so your organisation can offer adaptive options without the R&amp;D.
           </p>
           <GradientButton href="#enquiry-form">Enquire Now</GradientButton>
         </div>

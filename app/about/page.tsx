@@ -13,7 +13,7 @@ const values = [
   {
     name: "Belonging",
     icon: "🤝",
-    description: "Creating spaces — physical and digital — where everyone is genuinely included, not just accommodated.",
+    description: "Creating spaces (physical and digital) where everyone is genuinely included, not just accommodated.",
   },
   {
     name: "Respect",
@@ -23,7 +23,7 @@ const values = [
   {
     name: "Simplicity",
     icon: "○",
-    description: "Removing friction in every interaction — from finding a product to getting a garment adapted.",
+    description: "Removing friction in every interaction, from finding a product to getting a garment adapted.",
   },
   {
     name: "Empowerment",
@@ -33,7 +33,7 @@ const values = [
   {
     name: "Trust",
     icon: "◈",
-    description: "Being reliable, transparent, and consistent — because our community deserves a brand they can count on.",
+    description: "Being reliable, transparent, and consistent, because our community deserves a brand they can count on.",
   },
 ];
 
@@ -68,10 +68,10 @@ export default function AboutPage() {
             <GradientText>The why</GradientText>
           </h2>
           <p className="text-[#5a5a5a] leading-relaxed mb-4 text-lg">
-            Antami — meaning inspiration, passion, and belonging — was born from the belief that everyone deserves clothing that works for them, not the other way around.
+            Antami (meaning inspiration, passion, and belonging) was born from the belief that everyone deserves clothing that works for them, not the other way around.
           </p>
           <p className="text-[#5a5a5a] leading-relaxed mb-4">
-            For too long, individuals with special needs have had to compromise on style, identity, and independence to find functional clothing. We built Antami to change that — starting with adaptive abayas and kandouras rooted in Emirati culture.
+            For too long, individuals with special needs have had to compromise on style, identity, and independence to find functional clothing. We built Antami to change that, starting with adaptive abayas and kandouras rooted in Emirati culture.
           </p>
           <p className="text-[#5a5a5a] leading-relaxed">
             Belonging should be a natural part of everyday life, not an exception.

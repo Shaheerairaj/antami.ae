@@ -2,9 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 const shopLinks = [
+  { href: "/adaptive-clothing", label: "Adaptive Clothing" },
   { href: "/shop/adaptive-abayas", label: "Adaptive Abayas" },
   { href: "/shop/adaptive-kandouras", label: "Kandouras" },
-  { href: "/shop/accessories", label: "Accessories" },
+  { href: "/shop/accessories", label: "Embedded Accessories" },
 ];
 
 const companyLinks = [

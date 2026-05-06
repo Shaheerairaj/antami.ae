@@ -20,23 +20,23 @@ const steps = [
 const faqs = [
   {
     question: "How long does the adaptation take?",
-    answer: "Turnaround times vary depending on the complexity of the adaptation. We'll confirm a timeline once we receive your form and garment. Placeholder — to be provided by founders.",
+    answer: "Turnaround times vary depending on the complexity of the adaptation. We'll confirm a timeline once we receive your form and garment. Placeholder, to be provided by founders.",
   },
   {
     question: "What garments can you adapt?",
-    answer: "We can adapt most garments including abayas, kandouras, and everyday clothing. Placeholder — to be provided by founders.",
+    answer: "We can adapt most garments including abayas, kandouras, and everyday clothing. Placeholder, to be provided by founders.",
   },
   {
     question: "Do I need to be in the UAE?",
-    answer: "We primarily serve clients in the UAE at launch. Placeholder — to be provided by founders.",
+    answer: "We primarily serve clients in the UAE at launch. Placeholder, to be provided by founders.",
   },
   {
     question: "How do I deliver my item?",
-    answer: "You can drop off your item or use a courier service. We'll provide full instructions after you submit the form. Placeholder — to be provided by founders.",
+    answer: "You can drop off your item or use a courier service. We'll provide full instructions after you submit the form. Placeholder, to be provided by founders.",
   },
   {
     question: "What types of adaptations do you offer?",
-    answer: "We offer magnetic closures, velcro replacements, open-back options, easy-access openings, and more. Placeholder — to be provided by founders.",
+    answer: "We offer magnetic closures, velcro replacements, open-back options, easy-access openings, and more. Placeholder, to be provided by founders.",
   },
 ];
 
@@ -84,7 +84,7 @@ export default function AdaptAtYourServicePage() {
               <div className="text-3xl mb-3" aria-hidden="true">💝</div>
               <h3 className="font-semibold text-lg text-[#2d2d2d] mb-2">I already have a piece I love</h3>
               <p className="text-[#5a5a5a] text-sm leading-relaxed">
-                Bring your pre-owned favourite item to us and we&apos;ll adapt it to work for you — keeping what you love while adding what you need.
+                Bring your pre-owned favourite item to us and we&apos;ll adapt it to work for you, keeping what you love while adding what you need.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-sm gradient-border-top">

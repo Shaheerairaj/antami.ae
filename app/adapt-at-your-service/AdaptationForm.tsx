@@ -53,7 +53,7 @@ export function AdaptationForm() {
         <div className="text-5xl mb-4" aria-hidden="true">✓</div>
         <h3 className="text-xl font-semibold text-[#2d2d2d] mb-2">Request received!</h3>
         <p className="text-[#5a5a5a]">
-          Thank you — Shaikha and Sally will be in touch shortly to discuss your adaptation.
+          Thank you. Shaikha and Sally will be in touch shortly to discuss your adaptation.
         </p>
       </div>
     );

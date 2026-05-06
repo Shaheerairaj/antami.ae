@@ -21,7 +21,7 @@ export default function ContactPage() {
             <GradientText>Get in Touch</GradientText>
           </h1>
           <p className="text-[#5a5a5a] text-lg max-w-md mx-auto">
-            The Antami team is here to help — whether you&apos;re curious about a product, need support, or want to learn more.
+            The Antami team is here to help, whether you&apos;re curious about a product, need support, or want to learn more.
           </p>
         </div>
       </section>
@@ -56,7 +56,7 @@ export default function ContactPage() {
 
           <div className="mt-12 text-center">
             <p className="text-sm text-[#5a5a5a]">
-              🇦🇪 UAE-based — proud to serve the community here and beyond.
+              🇦🇪 UAE-based, proud to serve the community here and beyond.
             </p>
           </div>
         </div>

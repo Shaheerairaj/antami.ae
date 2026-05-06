@@ -4,12 +4,12 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Antami — Where Belonging is for Everyone | Adaptive Clothing UAE",
+  title: "Antami: Where Belonging is for Everyone | Adaptive Clothing UAE",
   description:
     "Antami is the UAE's first adaptive clothing brand. Shop adaptive abayas, kandouras, and accessories, or send us your favourite item to adapt.",
   metadataBase: new URL("https://antami.ae"),
   openGraph: {
-    title: "Antami — Where Belonging is for Everyone",
+    title: "Antami: Where Belonging is for Everyone",
     description: "The UAE's first adaptive clothing brand built for real life, real comfort, and real dignity.",
     images: [{ url: "/logos/logo-light.png", width: 1200, height: 630, alt: "Antami logo" }],
     locale: "en_AE",

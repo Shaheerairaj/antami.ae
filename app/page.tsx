@@ -1,54 +1,49 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { GradientText } from "@/components/GradientText";
 import { GradientButton } from "@/components/GradientButton";
 import { OutlineButton } from "@/components/OutlineButton";
-import { ServiceCard } from "@/components/ServiceCard";
 import { ValuePill } from "@/components/ValuePill";
 import { SectionBanner } from "@/components/SectionBanner";
-import { StepFlow } from "@/components/StepFlow";
+import { PersonaSelector } from "./PersonaSelector";
+
+export const metadata: Metadata = {
+  title: "Antami: Where Belonging is for Everyone",
+  description:
+    "Antami is where people with disabilities, their families, and anyone who has ever struggled to belong feel seen, understood, and supported, with the products, knowledge, and community to live everyday life with dignity.",
+};
 
 const values = ["Belonging", "Respect", "Simplicity", "Empowerment", "Trust"];
 
-const services = [
+const pillars = [
   {
-    icon: "✦",
-    title: "Adaptive Abayas",
-    description: "Beautifully designed abayas adapted for comfort and independence.",
-    href: "/shop/adaptive-abayas",
+    icon: "👗",
+    title: "Adaptive Clothing",
+    description:
+      "Abayas, kandouras, and embedded adaptive accessories, plus our Adapt at Your Service for the pieces you already love.",
+    href: "/adaptive-clothing",
+    cta: "Explore the collection",
+    status: "Available now",
   },
   {
-    icon: "✧",
-    title: "Adaptive Kandouras",
-    description: "Traditional kandouras reimagined for ease of movement and dressing.",
-    href: "/shop/adaptive-kandouras",
+    icon: "🤖",
+    title: "Antami AI",
+    description:
+      "An AI companion for parents, employers, service providers, and individuals, answering disability questions clearly, kindly, and reliably.",
+    href: "/contact",
+    cta: "Be the first to know",
+    status: "Coming soon",
   },
   {
-    icon: "⟳",
-    title: "Adapt at Your Service",
-    description: "Send us your favourite piece. We'll make it work for you.",
-    href: "/adapt-at-your-service",
-    linkLabel: "Get started",
+    icon: "🎓",
+    title: "Antami Academy",
+    description:
+      "An online platform with courses from leading specialists, for service providers, families, corporates, and government entities.",
+    href: "/contact",
+    cta: "Be the first to know",
+    status: "Coming soon",
   },
-  {
-    icon: "◈",
-    title: "Accessories",
-    description: "MagZipper, ZipperBuddy, and magnetic closures — small tools, big difference.",
-    href: "/shop/accessories",
-  },
-  {
-    icon: "🏢",
-    title: "For Suppliers (B2B)",
-    description: "We supply MagZip, clothes magnets, and velcro to hospitals, special needs centres, and clothing brands.",
-    href: "/suppliers",
-    linkLabel: "Enquire",
-  },
-];
-
-const steps = [
-  { number: 1, icon: "👗", title: "Choose", description: "Bring your favourite item or choose something new." },
-  { number: 2, icon: "📦", title: "Deliver", description: "Send the garment to our team in the UAE." },
-  { number: 3, icon: "✏️", title: "Customize", description: "Fill in our form to describe your adaptations." },
-  { number: 4, icon: "🏠", title: "Receive", description: "We adapt and deliver it back to you." },
 ];
 
 export default function HomePage() {
@@ -56,63 +51,74 @@ export default function HomePage() {
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section
-        className="relative min-h-[calc(100vh-4rem)] flex items-center bg-[#f9fafa] overflow-hidden"
+        className="relative min-h-[calc(100vh-7rem)] flex items-center bg-[#f9fafa] overflow-hidden"
         aria-labelledby="hero-heading"
       >
         <div
           className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full pointer-events-none"
           style={{
             background:
-              "radial-gradient(circle, rgba(1,239,172,0.15) 0%, rgba(95,42,132,0.08) 60%, transparent 80%)",
+              "radial-gradient(circle, rgba(1,239,172,0.18) 0%, rgba(95,42,132,0.10) 60%, transparent 80%)",
+          }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(82,64,150,0.12) 0%, rgba(32,130,166,0.08) 50%, transparent 80%)",
           }}
           aria-hidden="true"
         />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             <p className="text-sm font-semibold text-[#5a5a5a] uppercase tracking-wider mb-4">
-              Your first Emirati adaptive brand
+              Antami means belonging
             </p>
             <h1
               id="hero-heading"
-              className="text-5xl sm:text-6xl lg:text-7xl leading-tight mb-6"
+              className="text-5xl sm:text-6xl lg:text-7xl leading-[1.05] mb-8"
               style={{ fontFamily: "Helony, Georgia, serif" }}
             >
-              <GradientText>Where Belonging</GradientText>
-              <br />
-              <span className="text-[#2d2d2d]">is for Everyone</span>
+              <GradientText>Belonging</GradientText>
+              <span className="text-[#2d2d2d]"> is for everyone.</span>
             </h1>
-            <p className="text-lg text-[#5a5a5a] leading-relaxed mb-10 max-w-xl">
-              The first Emirati adaptive clothing brand — designed for real life, real comfort, and real dignity.
+            <p className="text-xl text-[#5a5a5a] leading-relaxed mb-10 max-w-2xl">
+              For people with disabilities, their families, and anyone who has ever struggled to belong. A place to feel seen, understood, and met with the support you need.
             </p>
             <div className="flex flex-wrap gap-4">
-              <GradientButton href="/shop">Shop Now</GradientButton>
-              <OutlineButton href="/adapt-at-your-service">Adapt My Item</OutlineButton>
+              <GradientButton href="#i-am">Find your starting point</GradientButton>
+              <OutlineButton href="/adaptive-clothing">Explore adaptive clothing</OutlineButton>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── What is Antami? ───────────────────────────────────── */}
-      <section className="py-20 bg-white" aria-labelledby="about-heading">
+      {/* ── What we are ──────────────────────────────────────── */}
+      <section className="py-20 bg-white" aria-labelledby="what-we-are-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 id="about-heading" className="text-3xl sm:text-4xl mb-6" style={{ fontFamily: "Helony, Georgia, serif" }}>
-                <span className="text-[#2d2d2d]">Antami means </span>
+              <h2
+                id="what-we-are-heading"
+                className="text-3xl sm:text-4xl mb-6"
+                style={{ fontFamily: "Helony, Georgia, serif" }}
+              >
+                <span className="text-[#2d2d2d]">A one stop for </span>
                 <GradientText>belonging</GradientText>
               </h2>
-              <p className="text-[#5a5a5a] leading-relaxed mb-4">
-                Antami — meaning inspiration, passion, and belonging — is a connected ecosystem created to support individuals with special needs, their families, caregivers, and service providers.
+              <p className="text-[#5a5a5a] leading-relaxed mb-4 text-lg">
+                Antami is built on a single idea: that everyone deserves to feel understood and to belong. For individuals with disabilities, their families, caregivers, and the people working alongside them, we bring together what's been scattered across too many places. One home, built with dignity at its centre.
               </p>
               <p className="text-[#5a5a5a] leading-relaxed">
-                We move inclusion beyond awareness into real access, dignity, and meaningful participation. Built on the belief that belonging should be a natural part of everyday life.
+                We move inclusion beyond awareness into real access, real dignity, and real participation, because belonging should be a natural part of everyday life, not an exception.
               </p>
             </div>
             <div className="flex items-center justify-center">
               <div className="relative w-64 h-64">
                 <Image
                   src="/logos/logo-light.png"
-                  alt="Antami brand icon — a circular swoosh representing community and belonging"
+                  alt="Antami brand icon: a circular swoosh representing community and belonging"
                   fill
                   className="object-contain"
                 />
@@ -122,26 +128,85 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Services ─────────────────────────────────────────── */}
-      <section className="py-20 bg-[#f9fafa]" aria-labelledby="services-heading">
+      {/* ── I am ─────────────────────────────────────────────── */}
+      <section
+        id="i-am"
+        className="py-20 bg-[#f9fafa] scroll-mt-28"
+        aria-labelledby="i-am-heading"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2
-            id="services-heading"
-            className="text-3xl sm:text-4xl text-center mb-12"
-            style={{ fontFamily: "Helony, Georgia, serif" }}
-          >
-            <GradientText>What we offer</GradientText>
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {services.map((s) => (
-              <ServiceCard key={s.href} {...s} />
+          <div className="text-center mb-12">
+            <h2
+              id="i-am-heading"
+              className="text-3xl sm:text-4xl mb-4"
+              style={{ fontFamily: "Helony, Georgia, serif" }}
+            >
+              <span className="text-[#2d2d2d]">I am</span>
+              <span className="text-[#2d2d2d]">…</span>
+            </h2>
+            <p className="text-[#5a5a5a] max-w-xl mx-auto">
+              Tell us a little about you. We'll show you what Antami means for your everyday.
+            </p>
+          </div>
+          <PersonaSelector />
+        </div>
+      </section>
+
+      {/* ── Pillars ──────────────────────────────────────────── */}
+      <section className="py-20 bg-white" aria-labelledby="pillars-heading">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2
+              id="pillars-heading"
+              className="text-3xl sm:text-4xl mb-4"
+              style={{ fontFamily: "Helony, Georgia, serif" }}
+            >
+              <GradientText>What Antami offers</GradientText>
+            </h2>
+            <p className="text-[#5a5a5a] max-w-xl mx-auto">
+              Three connected pillars, designed to grow with our community.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {pillars.map((p) => (
+              <div
+                key={p.title}
+                className="gradient-border-top bg-[#f9fafa] rounded-2xl p-7 flex flex-col gap-4"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center text-2xl text-white" aria-hidden="true">
+                    {p.icon}
+                  </div>
+                  <span
+                    className={`text-xs font-semibold px-3 py-1 rounded-full ${
+                      p.status === "Available now"
+                        ? "bg-[#01efac]/20 text-[#0d6b53]"
+                        : "bg-[#524096]/15 text-[#524096]"
+                    }`}
+                  >
+                    {p.status}
+                  </span>
+                </div>
+                <h3 className="font-semibold text-xl text-[#2d2d2d]">{p.title}</h3>
+                <p className="text-[#5a5a5a] text-sm leading-relaxed flex-1">
+                  {p.description}
+                </p>
+                <Link
+                  href={p.href}
+                  className="text-[#524096] font-semibold text-sm hover:underline focus-visible:underline"
+                  aria-label={`${p.cta} about ${p.title}`}
+                >
+                  {p.cta} →
+                </Link>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Values Strip ─────────────────────────────────────── */}
-      <section className="py-12 bg-white" aria-label="Brand values">
+      {/* ── Values strip ─────────────────────────────────────── */}
+      <section className="py-12 bg-[#f9fafa]" aria-label="Brand values">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-row flex-wrap justify-center gap-3">
             {values.map((v, i) => (
@@ -151,7 +216,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Mission Statement ────────────────────────────────── */}
+      {/* ── Mission ──────────────────────────────────────────── */}
       <SectionBanner>
         <h2
           id="mission-heading"
@@ -162,29 +227,9 @@ export default function HomePage() {
           <GradientText>This is about community, autonomy, and opportunity.</GradientText>&rdquo;
         </h2>
         <p className="text-white/60 leading-relaxed max-w-2xl mx-auto">
-          Antami is a connected ecosystem created to support individuals with special needs, their families, caregivers, and service providers — moving inclusion beyond awareness into real access, dignity, and meaningful participation.
+          Antami exists so individuals with disabilities, their families, caregivers, and service providers can find the products, knowledge, and people they need: together, in one place, with the dignity they deserve.
         </p>
       </SectionBanner>
-
-      {/* ── How It Works ─────────────────────────────────────── */}
-      <section className="py-20 bg-[#f9fafa]" aria-labelledby="how-it-works-heading">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2
-            id="how-it-works-heading"
-            className="text-3xl sm:text-4xl text-center mb-4"
-            style={{ fontFamily: "Helony, Georgia, serif" }}
-          >
-            <GradientText>How it works</GradientText>
-          </h2>
-          <p className="text-center text-[#5a5a5a] mb-12 max-w-xl mx-auto">
-            Our Adapt at Your Service makes getting adaptive clothing simple.
-          </p>
-          <StepFlow steps={steps} />
-          <div className="text-center mt-12">
-            <GradientButton href="/adapt-at-your-service">Start Your Adaptation</GradientButton>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

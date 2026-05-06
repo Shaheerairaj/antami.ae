@@ -32,8 +32,8 @@ const categories = [
   },
   {
     href: "/shop/accessories",
-    title: "Accessories",
-    description: "MagZipper, ZipperBuddy, and magnetic clothing closures — small tools with a big impact.",
+    title: "Embedded Accessories",
+    description: "Magnetic zippers, hidden closures, easy-grip pulls: adaptive features built right into your outfit.",
     color: "#5f2a84",
     textColor: "#ffffff",
   },
@@ -52,7 +52,7 @@ export default function ShopPage() {
             <GradientText>Shop Adaptive Clothing</GradientText>
           </h1>
           <p className="text-[#5a5a5a] text-lg max-w-xl mx-auto">
-            Your first Emirati adaptive brand — designed for real life, real comfort, and real dignity.
+            Your first Emirati adaptive brand, designed for real life, real comfort, and real dignity.
           </p>
         </div>
       </section>

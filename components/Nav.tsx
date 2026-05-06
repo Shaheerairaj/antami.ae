@@ -4,8 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const navLinks = [
-  { href: "/shop", label: "Shop" },
-  { href: "/adapt-at-your-service", label: "Adapt at Your Service" },
+  { href: "/adaptive-clothing", label: "Adaptive Clothing" },
   { href: "/suppliers", label: "For Suppliers" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -30,7 +29,7 @@ export function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-28">
           {/* Logo */}
-          <Link href="/" aria-label="Antami — home">
+          <Link href="/" aria-label="Antami home">
             <Image
               src={scrolled || menuOpen ? "/logos/logo-light.png" : "/logos/logo-light.png"}
               alt="Antami"
@@ -55,7 +54,7 @@ export function Nav() {
             <span className="relative group">
               <button
                 className="text-sm font-medium text-[#5a5a5a] cursor-default"
-                aria-label="Language toggle — Arabic coming soon"
+                aria-label="Language toggle: Arabic coming soon"
               >
                 AR | EN
               </button>
@@ -102,7 +101,7 @@ export function Nav() {
                 {link.label}
               </Link>
             ))}
-            <p className="py-3 text-sm text-[#5a5a5a]">Arabic — Coming Soon</p>
+            <p className="py-3 text-sm text-[#5a5a5a]">Arabic: Coming Soon</p>
           </nav>
         </div>
       </div>

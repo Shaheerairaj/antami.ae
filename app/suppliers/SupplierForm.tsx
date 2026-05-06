@@ -50,7 +50,7 @@ export function SupplierForm() {
         <div className="text-5xl mb-4" aria-hidden="true">✓</div>
         <h3 className="text-xl font-semibold text-[#2d2d2d] mb-2">Enquiry received!</h3>
         <p className="text-[#5a5a5a]">
-          Thank you — Shaikha and Sally will be in touch within 2 business days.
+          Thank you. Shaikha and Sally will be in touch within 2 business days.
         </p>
       </div>
     );
@@ -164,9 +164,11 @@ export function SupplierForm() {
         </legend>
         <div className="flex flex-col gap-2 mt-1" aria-describedby={errors.products ? "products-error" : undefined}>
           {[
-            { value: "magzip", label: "MagZip — Magnetic Zipper" },
-            { value: "magnets", label: "Clothes Magnets" },
-            { value: "velcro", label: "Velcro Closures" },
+            { value: "magnetic-zippers", label: "Magnetic zippers" },
+            { value: "magnetic-closures", label: "Hidden magnetic closures" },
+            { value: "velcro", label: "Velcro panels" },
+            { value: "easy-grip", label: "Easy-grip pulls" },
+            { value: "other", label: "Other / not sure" },
           ].map((opt) => (
             <label key={opt.value} className="flex items-center gap-2 cursor-pointer min-h-[44px]">
               <input
