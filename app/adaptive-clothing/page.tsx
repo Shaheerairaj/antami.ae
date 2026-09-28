@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { GradientText } from "@/components/GradientText";
+import { ArmHero } from "@/components/ArmHero";
 import { GradientButton } from "@/components/GradientButton";
-import { OutlineButton } from "@/components/OutlineButton";
+import { GhostButton } from "@/components/GhostButton";
+import { InvertButton } from "@/components/InvertButton";
+import { GlassCard } from "@/components/GlassCard";
 import { ServiceCard } from "@/components/ServiceCard";
+import { ProductCard } from "@/components/ProductCard";
 import { ValuePill } from "@/components/ValuePill";
 import { SectionBanner } from "@/components/SectionBanner";
 import { StepFlow } from "@/components/StepFlow";
+import { GradientText } from "@/components/GradientText";
+import { arms } from "@/lib/arms";
+
+const arm = arms.find((a) => a.slug === "adaptive-clothing")!;
 
 export const metadata: Metadata = {
   title: "Adaptive Clothing | Antami",
@@ -16,19 +23,21 @@ export const metadata: Metadata = {
 
 const values = ["Belonging", "Respect", "Simplicity", "Empowerment", "Trust"];
 
+const womenProducts = [
+  { name: "Adaptive Abaya, Sand", description: "Magnetic front closure, open-back option for seated wear.", price: "AED 420" },
+  { name: "Adaptive Abaya, Charcoal", description: "Easy-grip pulls and a soft, breathable fabric.", price: "AED 420" },
+  { name: "Adaptive Wrap Dress", description: "One-handed wrap closure, no buttons or zips.", price: "AED 350" },
+  { name: "Adaptive Jalabiya", description: "Wide sleeves and a relaxed fit for ease of movement.", price: "AED 380" },
+];
+
+const menProducts = [
+  { name: "Adaptive Kandoura, White", description: "Hidden magnetic placket, adjustable seated hem.", price: "AED 390" },
+  { name: "Adaptive Kandoura, Grey", description: "Front-fastening collar for easier dressing.", price: "AED 390" },
+  { name: "Adaptive Bisht", description: "Lightweight shoulder drape with a simple clasp.", price: "AED 450" },
+  { name: "Adaptive Thobe Set", description: "Matching set with magnetic cuffs and side seam access.", price: "AED 410" },
+];
+
 const services = [
-  {
-    icon: "✦",
-    title: "Adaptive Abayas",
-    description: "Beautifully designed abayas adapted for comfort and independence.",
-    href: "/shop/adaptive-abayas",
-  },
-  {
-    icon: "✧",
-    title: "Adaptive Kandouras",
-    description: "Traditional kandouras reimagined for ease of movement and dressing.",
-    href: "/shop/adaptive-kandouras",
-  },
   {
     icon: "⟳",
     title: "Adapt at Your Service",
@@ -61,60 +70,32 @@ const steps = [
 export default function AdaptiveClothingPage() {
   return (
     <>
-      {/* ── Hero ─────────────────────────────────────────────── */}
-      <section
-        className="relative min-h-[calc(100vh-4rem)] flex items-center bg-[#f9fafa] overflow-hidden"
-        aria-labelledby="hero-heading"
+      <ArmHero
+        color={arm.color}
+        textColor={arm.textColor}
+        eyebrow="Your first Emirati adaptive brand"
+        title="Where Belonging is for Everyone"
+        description="The first Emirati adaptive clothing brand, designed for real life, real comfort, and real dignity."
       >
-        <div
-          className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(1,239,172,0.15) 0%, rgba(95,42,132,0.08) 60%, transparent 80%)",
-          }}
-          aria-hidden="true"
-        />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold text-[#5a5a5a] uppercase tracking-wider mb-4">
-              Your first Emirati adaptive brand
-            </p>
-            <h1
-              id="hero-heading"
-              className="text-5xl sm:text-6xl lg:text-7xl leading-tight mb-6"
-              style={{ fontFamily: "Helony, Georgia, serif" }}
-            >
-              <GradientText>Where Belonging</GradientText>
-              <br />
-              <span className="text-[#2d2d2d]">is for Everyone</span>
-            </h1>
-            <p className="text-lg text-[#5a5a5a] leading-relaxed mb-10 max-w-xl">
-              The first Emirati adaptive clothing brand, designed for real life, real comfort, and real dignity.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <GradientButton href="/shop">Shop Now</GradientButton>
-              <OutlineButton href="/adapt-at-your-service">Adapt My Item</OutlineButton>
-            </div>
-          </div>
-        </div>
-      </section>
+        <InvertButton href="#shop" accentColor={arm.accent}>Shop Now</InvertButton>
+        <GhostButton href="/adapt-at-your-service" textColor={arm.textColor}>Adapt My Item</GhostButton>
+      </ArmHero>
 
       {/* ── What is Antami? ───────────────────────────────────── */}
-      <section className="py-20 bg-white" aria-labelledby="about-heading">
+      <section className="py-20" style={{ backgroundColor: arm.color }} aria-labelledby="about-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 id="about-heading" className="text-3xl sm:text-4xl mb-6" style={{ fontFamily: "Helony, Georgia, serif" }}>
-                <span className="text-[#2d2d2d]">Antami means </span>
-                <GradientText>belonging</GradientText>
+            <GlassCard className="p-8">
+              <h2 id="about-heading" className="text-3xl sm:text-4xl mb-6 text-white" style={{ fontFamily: "Helony, Georgia, serif" }}>
+                Antami means belonging
               </h2>
-              <p className="text-[#5a5a5a] leading-relaxed mb-4">
+              <p className="text-white/85 leading-relaxed mb-4">
                 Antami (meaning inspiration, passion, and belonging) is a connected ecosystem created to support individuals with special needs, their families, caregivers, and service providers.
               </p>
-              <p className="text-[#5a5a5a] leading-relaxed">
+              <p className="text-white/85 leading-relaxed">
                 We move inclusion beyond awareness into real access, dignity, and meaningful participation. Built on the belief that belonging should be a natural part of everyday life.
               </p>
-            </div>
+            </GlassCard>
             <div className="flex items-center justify-center">
               <div className="relative w-64 h-64">
                 <Image
@@ -129,6 +110,36 @@ export default function AdaptiveClothingPage() {
         </div>
       </section>
 
+      {/* ── Shop by category ──────────────────────────────────── */}
+      <section id="shop" className="py-20 bg-white scroll-mt-24 md:scroll-mt-[152px]" aria-labelledby="shop-heading">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            id="shop-heading"
+            className="text-3xl sm:text-4xl text-center mb-4"
+            style={{ fontFamily: "Helony, Georgia, serif" }}
+          >
+            <GradientText>Shop the collection</GradientText>
+          </h2>
+          <p className="text-center text-[#5a5a5a] mb-12 max-w-xl mx-auto">
+            A proof of concept of what our adaptive collection will look like, for women and men.
+          </p>
+
+          <h3 className="text-xl font-semibold text-[#2d2d2d] mb-5">Women&rsquo;s Collection</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+            {womenProducts.map((p) => (
+              <ProductCard key={p.name} {...p} ctaLabel="View item" />
+            ))}
+          </div>
+
+          <h3 className="text-xl font-semibold text-[#2d2d2d] mb-5">Men&rsquo;s Collection</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {menProducts.map((p) => (
+              <ProductCard key={p.name} {...p} ctaLabel="View item" />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Services ─────────────────────────────────────────── */}
       <section className="py-20 bg-[#f9fafa]" aria-labelledby="services-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -137,9 +148,9 @@ export default function AdaptiveClothingPage() {
             className="text-3xl sm:text-4xl text-center mb-12"
             style={{ fontFamily: "Helony, Georgia, serif" }}
           >
-            <GradientText>What we offer</GradientText>
+            <GradientText>What else we offer</GradientText>
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s) => (
               <ServiceCard key={s.href} {...s} />
             ))}

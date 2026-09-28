@@ -18,14 +18,14 @@ const personas: Persona[] = [
     icon: "🌿",
     title: "A person with a disability",
     intro:
-      "Find clothes that work the way you do, connect with a community that gets it, and access support tailored to your everyday.",
+      "Find a community that gets it, knowledge built for your everyday, and support tailored to real life.",
     subItems: [
       "Living independently",
-      "Dressing with dignity",
+      "Everyday dignity",
       "Finding community",
     ],
     ctas: [
-      { label: "Shop adaptive clothing", href: "/shop", primary: true },
+      { label: "Explore Antami", href: "/about", primary: true },
       { label: "Talk to us", href: "/contact" },
     ],
   },
@@ -34,10 +34,10 @@ const personas: Persona[] = [
     icon: "🤝",
     title: "A family member",
     intro:
-      "Whether you're a parent, sibling, or caring for someone you love, you'll find tools, products, and people who understand.",
+      "Whether you're a parent, sibling, or caring for someone you love, you'll find knowledge, products, and people who understand.",
     subItems: ["A mother", "A father", "A sibling", "A caregiver"],
     ctas: [
-      { label: "Browse for your loved one", href: "/shop", primary: true },
+      { label: "Explore Antami", href: "/about", primary: true },
       { label: "Get in touch", href: "/contact" },
     ],
   },
@@ -46,10 +46,10 @@ const personas: Persona[] = [
     icon: "🩺",
     title: "A service provider",
     intro:
-      "Equip yourself and the people you serve with adaptive products, professional resources, and training built with specialists.",
+      "Equip yourself and the people you serve with professional resources, products, and training built with specialists.",
     subItems: ["Doctor", "Nurse", "Therapist", "Specialist"],
     ctas: [
-      { label: "Supplier enquiry", href: "/suppliers", primary: true },
+      { label: "Explore Antami", href: "/about", primary: true },
       { label: "Talk to our team", href: "/contact" },
     ],
   },
@@ -68,7 +68,7 @@ const personas: Persona[] = [
     ],
     ctas: [
       { label: "Partner with Antami", href: "/contact", primary: true },
-      { label: "Bulk supply enquiry", href: "/suppliers" },
+      { label: "Explore Antami", href: "/about" },
     ],
   },
 ];

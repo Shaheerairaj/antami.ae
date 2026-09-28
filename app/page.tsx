@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { GradientText } from "@/components/GradientText";
 import { GradientButton } from "@/components/GradientButton";
-import { OutlineButton } from "@/components/OutlineButton";
 import { ValuePill } from "@/components/ValuePill";
 import { SectionBanner } from "@/components/SectionBanner";
 import { PersonaSelector } from "./PersonaSelector";
@@ -11,47 +9,17 @@ import { PersonaSelector } from "./PersonaSelector";
 export const metadata: Metadata = {
   title: "Antami: Where Belonging is for Everyone",
   description:
-    "Antami is where people with disabilities, their families, and anyone who has ever struggled to belong feel seen, understood, and supported, with the products, knowledge, and community to live everyday life with dignity.",
+    "Antami is where people with disabilities, their families, and anyone who has ever struggled to belong feel seen, understood, and supported, with the knowledge and community to live everyday life with dignity.",
 };
 
 const values = ["Belonging", "Respect", "Simplicity", "Empowerment", "Trust"];
-
-const pillars = [
-  {
-    icon: "👗",
-    title: "Adaptive Clothing",
-    description:
-      "Abayas, kandouras, and embedded adaptive accessories, plus our Adapt at Your Service for the pieces you already love.",
-    href: "/adaptive-clothing",
-    cta: "Explore the collection",
-    status: "Available now",
-  },
-  {
-    icon: "🤖",
-    title: "Antami AI",
-    description:
-      "An AI companion for parents, employers, service providers, and individuals, answering disability questions clearly, kindly, and reliably.",
-    href: "/contact",
-    cta: "Be the first to know",
-    status: "Coming soon",
-  },
-  {
-    icon: "🎓",
-    title: "Antami Academy",
-    description:
-      "An online platform with courses from leading specialists, for service providers, families, corporates, and government entities.",
-    href: "/contact",
-    cta: "Be the first to know",
-    status: "Coming soon",
-  },
-];
 
 export default function HomePage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section
-        className="relative min-h-[calc(100vh-7rem)] flex items-center bg-[#f9fafa] overflow-hidden"
+        className="relative min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-9rem)] flex items-center bg-[#f9fafa] overflow-hidden"
         aria-labelledby="hero-heading"
       >
         <div
@@ -88,7 +56,6 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <GradientButton href="#i-am">Find your starting point</GradientButton>
-              <OutlineButton href="/adaptive-clothing">Explore adaptive clothing</OutlineButton>
             </div>
           </div>
         </div>
@@ -131,7 +98,7 @@ export default function HomePage() {
       {/* ── I am ─────────────────────────────────────────────── */}
       <section
         id="i-am"
-        className="py-20 bg-[#f9fafa] scroll-mt-28"
+        className="py-20 bg-[#f9fafa] scroll-mt-24 md:scroll-mt-[152px]"
         aria-labelledby="i-am-heading"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -149,59 +116,6 @@ export default function HomePage() {
             </p>
           </div>
           <PersonaSelector />
-        </div>
-      </section>
-
-      {/* ── Pillars ──────────────────────────────────────────── */}
-      <section className="py-20 bg-white" aria-labelledby="pillars-heading">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2
-              id="pillars-heading"
-              className="text-3xl sm:text-4xl mb-4"
-              style={{ fontFamily: "Helony, Georgia, serif" }}
-            >
-              <GradientText>What Antami offers</GradientText>
-            </h2>
-            <p className="text-[#5a5a5a] max-w-xl mx-auto">
-              Three connected pillars, designed to grow with our community.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {pillars.map((p) => (
-              <div
-                key={p.title}
-                className="gradient-border-top bg-[#f9fafa] rounded-2xl p-7 flex flex-col gap-4"
-              >
-                <div className="flex items-center justify-between">
-                  <div className="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center text-2xl text-white" aria-hidden="true">
-                    {p.icon}
-                  </div>
-                  <span
-                    className={`text-xs font-semibold px-3 py-1 rounded-full ${
-                      p.status === "Available now"
-                        ? "bg-[#01efac]/20 text-[#0d6b53]"
-                        : "bg-[#524096]/15 text-[#524096]"
-                    }`}
-                  >
-                    {p.status}
-                  </span>
-                </div>
-                <h3 className="font-semibold text-xl text-[#2d2d2d]">{p.title}</h3>
-                <p className="text-[#5a5a5a] text-sm leading-relaxed flex-1">
-                  {p.description}
-                </p>
-                <Link
-                  href={p.href}
-                  className="text-[#524096] font-semibold text-sm hover:underline focus-visible:underline"
-                  aria-label={`${p.cta} about ${p.title}`}
-                >
-                  {p.cta} →
-                </Link>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
