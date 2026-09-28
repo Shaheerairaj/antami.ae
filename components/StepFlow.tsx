@@ -1,8 +1,5 @@
-import { ReactNode } from "react";
-
 interface Step {
   number: number;
-  icon: ReactNode;
   title: string;
   description: string;
 }
@@ -22,7 +19,6 @@ export function StepFlow({ steps }: Props) {
           <div className="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white font-bold text-lg mb-4 z-10">
             {step.number}
           </div>
-          <div className="text-2xl mb-2" aria-hidden="true">{step.icon}</div>
           <h3 className="font-semibold text-[#2d2d2d] mb-1">{step.title}</h3>
           <p className="text-[#5a5a5a] text-sm leading-relaxed">{step.description}</p>
         </li>

@@ -81,6 +81,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ── Arabic / RTL fonts ──────────────────────────────────────
+   Set on <html dir="rtl"> by app/ar/layout.tsx via next/font
+   CSS variables --font-body-ar / --font-display-ar. Higher
+   specificity than the plain .font-display utility so it wins
+   over the Latin default without touching that component. */
+html[dir="rtl"] body {
+  font-family: var(--font-body-ar), system-ui, sans-serif;
+}
+html[dir="rtl"] .font-display {
+  font-family: var(--font-display-ar), system-ui, serif;
+}
+
 /* ── Gradient utilities ──────────────────────────────────── */
 .gradient-text {
   background: linear-gradient(90deg, #01efac 0%, #01cbae 25%, #2082a6 50%, #524096 75%, #5f2a84 100%);
@@ -130,7 +142,7 @@ body {
 /* ── Skip link ───────────────────────────────────────────── */
 .skip-link {
   position: absolute;
-  top: -999px; left: 0;
+  top: -999px; inset-inline-start: 0;
   padding: 0.5rem 1rem;
   background: var(--color-purple);
   color: #fff;

@@ -13,13 +13,7 @@ export function ProductCard({ name, description, image, price, ctaLabel = "Enqui
   return (
     <article className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col">
       <div className="relative aspect-[4/3] bg-gradient-to-br from-[#f0fdf9] to-[#e8eaf6]">
-        {image ? (
-          <Image src={image} alt={name} fill className="object-cover" />
-        ) : (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-[#524096] opacity-30 text-6xl" aria-hidden="true">✦</span>
-          </div>
-        )}
+        {image && <Image src={image} alt={name} fill className="object-cover" />}
       </div>
       <div className="p-5 flex flex-col gap-3 flex-1">
         <div className="flex items-start justify-between gap-2">
