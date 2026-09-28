@@ -95,7 +95,11 @@ export default function CaregiverAppPage() {
         </div>
       </section>
 
-      <section className="py-20" style={{ backgroundColor: "#1a1a2e" }} aria-labelledby="cta-heading">
+      <section
+        className="py-20"
+        style={{ backgroundColor: "#1a1a2e" }}
+        aria-labelledby="cta-heading"
+      >
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span
             className="inline-block text-xs font-semibold px-3 py-1 rounded-full mb-6"

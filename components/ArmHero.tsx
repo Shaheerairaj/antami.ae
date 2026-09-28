@@ -12,7 +12,7 @@ interface Props {
 export function ArmHero({ color, textColor, eyebrow, title, description, children }: Props) {
   return (
     <section
-      className="relative overflow-hidden tab-spill-anim min-h-[60vh] flex items-start"
+      className="relative overflow-hidden min-h-[60vh] flex items-start"
       style={{ backgroundColor: color }}
       aria-labelledby="arm-hero-heading"
     >

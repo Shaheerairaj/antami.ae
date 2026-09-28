@@ -127,15 +127,6 @@ body {
   background: radial-gradient(circle at top right, transparent 13.5px, var(--tab-color) 14.5px);
 }
 
-/* ── Tab colour spill ────────────────────────────────────── */
-@keyframes tab-spill {
-  from { clip-path: circle(0% at 50% 0%); }
-  to   { clip-path: circle(150% at 50% 0%); }
-}
-.tab-spill-anim {
-  animation: tab-spill 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
 /* ── Skip link ───────────────────────────────────────────── */
 .skip-link {
   position: absolute;

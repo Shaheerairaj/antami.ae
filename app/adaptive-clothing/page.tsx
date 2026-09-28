@@ -111,7 +111,11 @@ export default function AdaptiveClothingPage() {
       </section>
 
       {/* ── Shop by category ──────────────────────────────────── */}
-      <section id="shop" className="py-20 bg-white scroll-mt-24 md:scroll-mt-[152px]" aria-labelledby="shop-heading">
+      <section
+        id="shop"
+        className="py-20 bg-white scroll-mt-24 md:scroll-mt-[152px]"
+        aria-labelledby="shop-heading"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2
             id="shop-heading"

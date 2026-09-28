@@ -75,7 +75,11 @@ export default function MarketplacePage() {
         </div>
       </section>
 
-      <section id="items" className="py-20 bg-white scroll-mt-24 md:scroll-mt-[152px]" aria-labelledby="items-heading">
+      <section
+        id="items"
+        className="py-20 bg-white scroll-mt-24 md:scroll-mt-[152px]"
+        aria-labelledby="items-heading"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2
             id="items-heading"
@@ -96,7 +100,11 @@ export default function MarketplacePage() {
         </div>
       </section>
 
-      <section className="py-20" style={{ backgroundColor: "#1a1a2e" }} aria-labelledby="sell-heading">
+      <section
+        className="py-20"
+        style={{ backgroundColor: "#1a1a2e" }}
+        aria-labelledby="sell-heading"
+      >
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2
             id="sell-heading"

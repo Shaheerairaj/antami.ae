@@ -97,7 +97,12 @@ export default function AcademyPage() {
         </div>
       </section>
 
-      <section id="skool" className="py-20" style={{ backgroundColor: "#1a1a2e" }} aria-labelledby="skool-heading">
+      <section
+        id="skool"
+        className="py-20"
+        style={{ backgroundColor: "#1a1a2e" }}
+        aria-labelledby="skool-heading"
+      >
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2
             id="skool-heading"
