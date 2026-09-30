@@ -1,17 +1,16 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { ArmHero } from "@/components/ArmHero";
-import { GradientButton } from "@/components/GradientButton";
 import { GhostButton } from "@/components/GhostButton";
-import { InvertButton } from "@/components/InvertButton";
+import { SolidButton } from "@/components/SolidButton";
 import { GlassCard } from "@/components/GlassCard";
 import { arms } from "@/lib/arms";
 
 const arm = arms.find((a) => a.slug === "caregiver-app")!;
 
 export const metadata: Metadata = {
-  title: "تطبيق مقدمي الرعاية | أنتامي",
+  title: "تطبيق مقدمي الرعاية | أنتمي",
   description:
-    "تطبيق لحجز خدمات موثوقة لمقدمي الرعاية والمساعدات المنزليات لأصحاب الهمم، قريبًا من أنتامي.",
+    "تطبيق لحجز خدمات موثوقة لمقدمي الرعاية والمساعدات المنزليات لأصحاب الهمم، قريبًا من أنتمي.",
 };
 
 const features = [
@@ -24,7 +23,7 @@ const features = [
 const whoFor = [
   "العائلات التي تنظم رعاية منزلية لأحد أصحاب الهمم",
   "الأفراد الراغبون في حجز دعم موثوق ومُدقق بأنفسهم",
-  "مقدمو الرعاية الراغبون في تقديم خدماتهم عبر أنتامي",
+  "مقدمو الرعاية الراغبون في تقديم خدماتهم عبر أنتمي",
 ];
 
 export default function CaregiverAppPage() {
@@ -32,29 +31,29 @@ export default function CaregiverAppPage() {
     <>
       <ArmHero
         color={arm.color}
-        textColor={arm.textColor}
+        accent={arm.accent}
         name={arm.labelAr}
         tagline="رعاية موثوقة، تُحجز بلمسات قليلة"
         description="تطبيق بُني لربط أصحاب الهمم وأسرهم بخدمات موثوقة لمقدمي الرعاية والمساعدات المنزليات، وقتما احتاجوها."
         fontFamily="var(--font-display-ar), sans-serif"
       >
-        <InvertButton href="/ar/contact" accentColor={arm.accent}>كن أول من يعلم</InvertButton>
-        <GhostButton href="/ar/contact" textColor={arm.textColor}>سجّل كمقدم رعاية</GhostButton>
+        <SolidButton href="/ar/contact" color={arm.accent}>كن أول من يعلم</SolidButton>
+        <GhostButton href="/ar/contact" textColor={arm.accent}>سجّل كمقدم رعاية</GhostButton>
       </ArmHero>
 
-      <section className="py-20" style={{ backgroundColor: arm.color }} aria-labelledby="who-heading">
+      <section className="py-20 bg-white" aria-labelledby="who-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2
             id="who-heading"
-            className="text-3xl sm:text-4xl mb-10 text-center text-white"
-            style={{ fontFamily: "var(--font-display-ar), sans-serif" }}
+            className="text-3xl sm:text-4xl mb-10 text-center"
+            style={{ fontFamily: "var(--font-display-ar), sans-serif", color: arm.accent }}
           >
             لمن هذا التطبيق
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {whoFor.map((w) => (
-              <GlassCard key={w}>
-                <p className="text-white leading-relaxed font-medium">{w}</p>
+              <GlassCard key={w} light>
+                <p className="text-[#2d2d2d] leading-relaxed font-medium">{w}</p>
               </GlassCard>
             ))}
           </div>
@@ -111,7 +110,7 @@ export default function CaregiverAppPage() {
           <p className="text-white/60 leading-relaxed mb-8">
             اترك بياناتك وسنخبرك بمجرد أن يصبح جاهزًا لحجز أول زيارة لك.
           </p>
-          <GradientButton href="/ar/contact">أبلغني</GradientButton>
+          <SolidButton href="/ar/contact" color={arm.accent}>أبلغني</SolidButton>
         </div>
       </section>
     </>

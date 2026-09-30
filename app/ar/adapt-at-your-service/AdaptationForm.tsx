@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState, useRef } from "react";
 
 type FormState = "idle" | "submitting" | "success" | "error";
@@ -222,7 +222,7 @@ export function AdaptationForm() {
         </button>
 
         <p className="text-xs text-[#5a5a5a] text-center">
-          <span aria-hidden="true">*</span> الحقول المطلوبة. يُرسل طلبك مباشرة إلى فريق أنتامي.
+          <span aria-hidden="true">*</span> الحقول المطلوبة. يُرسل طلبك مباشرة إلى فريق أنتمي.
         </p>
       </form>
     </div>

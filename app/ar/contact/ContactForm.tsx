@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 
 type FormState = "idle" | "submitting" | "success" | "error";
@@ -46,7 +46,7 @@ export function ContactForm() {
     return (
       <div role="alert" className="text-center py-12 bg-white rounded-2xl shadow-sm p-8">
         <h3 className="text-lg font-semibold text-[#2d2d2d] mb-2">تم إرسال الرسالة!</h3>
-        <p className="text-[#5a5a5a] text-sm">سيتواصل معك فريق أنتامي قريبًا.</p>
+        <p className="text-[#5a5a5a] text-sm">سيتواصل معك فريق أنتمي قريبًا.</p>
       </div>
     );
   }

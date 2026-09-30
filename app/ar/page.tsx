@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import { GradientText } from "@/components/GradientText";
 import { GradientButton } from "@/components/GradientButton";
@@ -7,9 +7,9 @@ import { SectionBanner } from "@/components/SectionBanner";
 import { PersonaSelector } from "./PersonaSelector";
 
 export const metadata: Metadata = {
-  title: "أنتامي: الانتماء للجميع",
+  title: "أنتمي: الانتماء للجميع",
   description:
-    "أنتامي هو المكان الذي يشعر فيه أصحاب الهمم وأسرهم وكل من عانى يومًا ليشعر بالانتماء، بأنهم مرئيون، ومفهومون، ومدعومون، مع المعرفة والمجتمع اللازمين لعيش الحياة اليومية بكرامة.",
+    "أنتمي هو المكان الذي يشعر فيه أصحاب الهمم وأسرهم وكل من عانى يومًا ليشعر بالانتماء، بأنهم مرئيون، ومفهومون، ومدعومون، مع المعرفة والمجتمع اللازمين لعيش الحياة اليومية بكرامة.",
 };
 
 const values = ["الانتماء", "الاحترام", "البساطة", "التمكين", "الثقة"];
@@ -19,7 +19,7 @@ export default function HomePage() {
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section
-        className="relative min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-9rem)] flex items-center bg-[#f9fafa] overflow-hidden"
+        className="relative min-h-[calc(100vh-88px)] flex items-center bg-[#f9fafa] overflow-hidden"
         aria-labelledby="hero-heading"
       >
         <div
@@ -41,7 +41,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold text-[#5a5a5a] uppercase tracking-wider mb-4">
-              أنتامي تعني الانتماء
+              أنتمي تعني الانتماء
             </p>
             <h1
               id="hero-heading"
@@ -75,7 +75,7 @@ export default function HomePage() {
                 <GradientText>الانتماء</GradientText>
               </h2>
               <p className="text-[#5a5a5a] leading-relaxed mb-4 text-lg">
-                تأسست أنتامي على فكرة واحدة: أن كل إنسان يستحق أن يُفهم وأن ينتمي. لأصحاب الهمم وأسرهم ومقدمي الرعاية والعاملين معهم، نجمع في مكان واحد ما كان متناثرًا في أماكن كثيرة جدًا. بيت واحد، بُني والكرامة في صميمه.
+                تأسست أنتمي على فكرة واحدة: أن كل إنسان يستحق أن يُفهم وأن ينتمي. لأصحاب الهمم وأسرهم ومقدمي الرعاية والعاملين معهم، نجمع في مكان واحد ما كان متناثرًا في أماكن كثيرة جدًا. بيت واحد، بُني والكرامة في صميمه.
               </p>
               <p className="text-[#5a5a5a] leading-relaxed">
                 نتجاوز التوعية إلى وصول حقيقي، وكرامة حقيقية، ومشاركة حقيقية، لأن الانتماء يجب أن يكون جزءًا طبيعيًا من الحياة اليومية، لا استثناءً.
@@ -85,7 +85,7 @@ export default function HomePage() {
               <div className="relative w-64 h-64">
                 <Image
                   src="/logos/logo-light.png"
-                  alt="شعار أنتامي: دوامة دائرية ترمز إلى المجتمع والانتماء"
+                  alt="شعار أنتمي: دوامة دائرية ترمز إلى المجتمع والانتماء"
                   fill
                   className="object-contain"
                 />
@@ -112,7 +112,7 @@ export default function HomePage() {
               <span className="text-[#2d2d2d]">…</span>
             </h2>
             <p className="text-[#5a5a5a] max-w-xl mx-auto">
-              أخبرنا قليلًا عن نفسك، وسنوضح لك ماذا يعني أنتامي في حياتك اليومية.
+              أخبرنا قليلًا عن نفسك، وسنوضح لك ماذا يعني أنتمي في حياتك اليومية.
             </p>
           </div>
           <PersonaSelector />
@@ -141,7 +141,7 @@ export default function HomePage() {
           <GradientText>هذا عن المجتمع، والاستقلالية، والفرصة.</GradientText>&rdquo;
         </h2>
         <p className="text-white/60 leading-relaxed max-w-2xl mx-auto">
-          وُجدت أنتامي ليجد أصحاب الهمم وأسرهم ومقدمو الرعاية ومقدمو الخدمات المنتجات والمعرفة والأشخاص الذين يحتاجونهم: معًا، في مكان واحد، بالكرامة التي يستحقونها.
+          وُجدت أنتمي ليجد أصحاب الهمم وأسرهم ومقدمو الرعاية ومقدمو الخدمات المنتجات والمعرفة والأشخاص الذين يحتاجونهم: معًا، في مكان واحد، بالكرامة التي يستحقونها.
         </p>
       </SectionBanner>
     </>

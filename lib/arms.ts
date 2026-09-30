@@ -1,4 +1,4 @@
-export type Locale = "en" | "ar";
+﻿export type Locale = "en" | "ar";
 
 export interface Arm {
   slug: string;
@@ -20,7 +20,7 @@ export const arms: Arm[] = [
     href: "/academy",
     matchPrefixes: ["/academy"],
     label: "Antami Academy",
-    labelAr: "أكاديمية أنتامي",
+    labelAr: "أكاديمية أنتمي",
     shortLabel: "Academy",
     shortLabelAr: "الأكاديمية",
     color: "#01efac",
@@ -32,7 +32,7 @@ export const arms: Arm[] = [
     href: "/caregiver-app",
     matchPrefixes: ["/caregiver-app"],
     label: "Antami Caregiver App",
-    labelAr: "تطبيق أنتامي لمقدمي الرعاية",
+    labelAr: "تطبيق أنتمي لمقدمي الرعاية",
     shortLabel: "Caregiver App",
     shortLabelAr: "تطبيق الرعاية",
     color: "#2082a6",
@@ -44,9 +44,9 @@ export const arms: Arm[] = [
     href: "/adaptive-clothing",
     matchPrefixes: ["/adaptive-clothing", "/shop", "/adapt-at-your-service", "/suppliers"],
     label: "Antami Adaptive Clothing",
-    labelAr: "أنتامي للملابس المتكيفة",
+    labelAr: "أنتمي للملابس المكيّفة",
     shortLabel: "Adaptive Clothing",
-    shortLabelAr: "الملابس المتكيفة",
+    shortLabelAr: "الملابس المكيّفة",
     color: "#524096",
     textColor: "#ffffff",
     accent: "#524096",
@@ -56,7 +56,7 @@ export const arms: Arm[] = [
     href: "/marketplace",
     matchPrefixes: ["/marketplace"],
     label: "Antami POD Marketplace",
-    labelAr: "سوق أنتامي POD",
+    labelAr: "سوق أنتمي POD",
     shortLabel: "Marketplace",
     shortLabelAr: "السوق",
     color: "#5f2a84",
@@ -64,6 +64,15 @@ export const arms: Arm[] = [
     accent: "#5f2a84",
   },
 ];
+
+/** Mixes a hex color with white at the given alpha, for soft tinted backgrounds. */
+export function withAlpha(hex: string, alpha: number): string {
+  const n = parseInt(hex.slice(1), 16);
+  const r = (n >> 16) & 255;
+  const g = (n >> 8) & 255;
+  const b = n & 255;
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
 
 /** Prefixes a route with /ar when rendering the Arabic tree. */
 export function localizeHref(href: string, locale: Locale): string {

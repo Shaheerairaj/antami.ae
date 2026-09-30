@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { GradientText } from "@/components/GradientText";
 import { ProductCard } from "@/components/ProductCard";
 import { GradientButton } from "@/components/GradientButton";
 
 export const metadata: Metadata = {
-  title: "العبايات المتكيفة | أنتامي",
+  title: "العبايات المكيّفة | أنتمي",
   description:
-    "عبايات متكيفة بتصميم أنيق من أجل الراحة والاستقلالية والكرامة. أول مجموعة عبايات متكيفة في الإمارات.",
+    "عبايات مكيّفة بتصميم أنيق من أجل الراحة والاستقلالية والكرامة. أول مجموعة عبايات مكيّفة في الإمارات.",
 };
 
 const products: Array<{ name: string; description: string }> = [];
@@ -23,11 +23,11 @@ export default function AdaptiveAbayas() {
               className="text-4xl sm:text-5xl"
               style={{ fontFamily: "var(--font-display-ar), sans-serif" }}
             >
-              <GradientText>العبايات المتكيفة</GradientText>
+              <GradientText>العبايات المكيّفة</GradientText>
             </h1>
           </div>
           <p className="text-[#5a5a5a] text-lg max-w-xl">
-            عبايات مصممة بعناية ومتكيفة من أجل الراحة والاستقلالية والكرامة. رُوعي كل تفصيل لتسهيل الارتداء والاستخدام اليومي.
+            عبايات مصممة بعناية ومكيّفة من أجل الراحة والاستقلالية والكرامة. رُوعي كل تفصيل لتسهيل الارتداء والاستخدام اليومي.
           </p>
         </div>
       </section>
@@ -46,7 +46,7 @@ export default function AdaptiveAbayas() {
                 قريبًا
               </h2>
               <p className="text-[#5a5a5a] mb-8 max-w-md mx-auto">
-                مجموعة العبايات المتكيفة لدينا قيد التطوير بعناية. كن أول من يعلم عند إطلاقها.
+                مجموعة العبايات المكيّفة لدينا قيد التطوير بعناية. كن أول من يعلم عند إطلاقها.
               </p>
               <GradientButton href="/ar/contact">أبلغني</GradientButton>
             </div>

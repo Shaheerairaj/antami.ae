@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { GradientText } from "@/components/GradientText";
 
 export const metadata: Metadata = {
-  title: "الإكسسوارات المتكيفة | أنتامي",
+  title: "الإكسسوارات المكيّفة | أنتمي",
   description:
-    "إكسسوارات تكيّفية مدمجة (سحابات مغناطيسية، إغلاقات مخفية، مقابض سهلة المسك) مدمجة في ملابس أنتامي لتجعل الارتداء أبسط وأكثر استقلالية.",
+    "إكسسوارات تكيّفية مدمجة (سحابات مغناطيسية، إغلاقات مخفية، مقابض سهلة المسك) مدمجة في ملابس أنتمي لتجعل الارتداء أبسط وأكثر استقلالية.",
 };
 
 const features = [
@@ -46,7 +46,7 @@ export default function AccessoriesPage() {
               className="text-4xl sm:text-5xl"
               style={{ fontFamily: "var(--font-display-ar), sans-serif" }}
             >
-              <GradientText>الإكسسوارات المتكيفة المدمجة</GradientText>
+              <GradientText>الإكسسوارات المكيّفة المدمجة</GradientText>
             </h1>
           </div>
           <p className="text-[#5a5a5a] text-lg max-w-2xl">
@@ -85,14 +85,14 @@ export default function AccessoriesPage() {
               <GradientText>هل تريد هذه الميزات في خزانتك؟</GradientText>
             </h2>
             <p className="text-[#5a5a5a] mb-6 max-w-xl mx-auto">
-              يمكن تصنيع كل قطعة من أنتامي بالميزات التكيفية التي تناسبك. تسوق مجموعتنا المتكيفة أو أرسل لنا قطعتك المفضلة لتكييفها.
+              يمكن تصنيع كل قطعة من أنتمي بالميزات التكيفية التي تناسبك. تسوق مجموعتنا المكيّفة أو أرسل لنا قطعتك المفضلة لتكييفها.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="/ar/shop"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-full gradient-bg text-white text-sm font-semibold hover:brightness-110 transition-all min-h-[44px]"
               >
-                تسوق الملابس المتكيفة
+                تسوق الملابس المكيّفة
               </a>
               <a
                 href="/ar/adapt-at-your-service"

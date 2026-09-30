@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { ArmHero } from "@/components/ArmHero";
 import { GradientButton } from "@/components/GradientButton";
 import { GhostButton } from "@/components/GhostButton";
-import { InvertButton } from "@/components/InvertButton";
+import { SolidButton } from "@/components/SolidButton";
 import { GlassCard } from "@/components/GlassCard";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ProductCard } from "@/components/ProductCard";
@@ -15,25 +15,25 @@ import { arms } from "@/lib/arms";
 const arm = arms.find((a) => a.slug === "adaptive-clothing")!;
 
 export const metadata: Metadata = {
-  title: "الملابس المتكيفة | أنتامي",
+  title: "الملابس المكيّفة | أنتمي",
   description:
-    "أول علامة إماراتية للملابس المتكيفة: عبايات، كندورات، إكسسوارات تكيّفية مدمجة، وخدمة التكييف حسب طلبك للقطع التي تحبها بالفعل.",
+    "أول علامة إماراتية للملابس المكيّفة: عبايات، كندورات، إكسسوارات تكيّفية مدمجة، وخدمة التكييف حسب طلبك للقطع التي تحبها بالفعل.",
 };
 
 const values = ["الانتماء", "الاحترام", "البساطة", "التمكين", "الثقة"];
 
 const womenProducts = [
-  { name: "عباية متكيفة، رملي", description: "إغلاق أمامي مغناطيسي، مع خيار فتحة خلفية للاستخدام أثناء الجلوس.", price: "420 د.إ" },
-  { name: "عباية متكيفة، رمادي فحمي", description: "مقابض سهلة المسك وقماش ناعم قابل للتهوية.", price: "420 د.إ" },
-  { name: "فستان لف متكيف", description: "إغلاق لف بيد واحدة، دون أزرار أو سحابات.", price: "350 د.إ" },
-  { name: "جلابية متكيفة", description: "أكمام واسعة وقصة مريحة لسهولة الحركة.", price: "380 د.إ" },
+  { name: "عباية مكيّفة، رملي", description: "إغلاق أمامي مغناطيسي، مع خيار فتحة خلفية للاستخدام أثناء الجلوس.", price: "420 د.إ" },
+  { name: "عباية مكيّفة، رمادي فحمي", description: "مقابض سهلة المسك وقماش ناعم قابل للتهوية.", price: "420 د.إ" },
+  { name: "فستان لف مكيّف", description: "إغلاق لف بيد واحدة، دون أزرار أو سحابات.", price: "350 د.إ" },
+  { name: "جلابية مكيّفة", description: "أكمام واسعة وقصة مريحة لسهولة الحركة.", price: "380 د.إ" },
 ];
 
 const menProducts = [
-  { name: "كندورة متكيفة، أبيض", description: "فتحة صدر مغناطيسية مخفية، وحافة سفلية قابلة للتعديل للجلوس.", price: "390 د.إ" },
-  { name: "كندورة متكيفة، رمادي", description: "ياقة بإغلاق أمامي لتسهيل الارتداء.", price: "390 د.إ" },
-  { name: "بشت متكيف", description: "رداء كتف خفيف الوزن بمشبك بسيط.", price: "450 د.إ" },
-  { name: "طقم ثوب متكيف", description: "طقم متناسق بأكمام مغناطيسية وفتحات جانبية للوصول السهل.", price: "410 د.إ" },
+  { name: "كندورة مكيّفة، أبيض", description: "فتحة صدر مغناطيسية مخفية، وحافة سفلية قابلة للتعديل للجلوس.", price: "390 د.إ" },
+  { name: "كندورة مكيّفة، رمادي", description: "ياقة بإغلاق أمامي لتسهيل الارتداء.", price: "390 د.إ" },
+  { name: "بشت مكيّف", description: "رداء كتف خفيف الوزن بمشبك بسيط.", price: "450 د.إ" },
+  { name: "طقم ثوب مكيّف", description: "طقم متناسق بأكمام مغناطيسية وفتحات جانبية للوصول السهل.", price: "410 د.إ" },
 ];
 
 const services = [
@@ -51,7 +51,7 @@ const services = [
   },
   {
     title: "للموردين (B2B)",
-    description: "نورّد إكسسوارات الملابس المتكيفة للمستشفيات ومراكز أصحاب الهمم والعلامات التجارية للملابس.",
+    description: "نورّد إكسسوارات الملابس المكيّفة للمستشفيات ومراكز أصحاب الهمم والعلامات التجارية للملابس.",
     href: "/ar/suppliers",
     linkLabel: "استفسر",
   },
@@ -69,27 +69,27 @@ export default function AdaptiveClothingPage() {
     <>
       <ArmHero
         color={arm.color}
-        textColor={arm.textColor}
+        accent={arm.accent}
         name={arm.labelAr}
         tagline="حيث الانتماء للجميع"
-        description="أول علامة إماراتية للملابس المتكيفة، صُممت لحياة حقيقية وراحة حقيقية وكرامة حقيقية."
+        description="أول علامة إماراتية للملابس المكيّفة، صُممت لحياة حقيقية وراحة حقيقية وكرامة حقيقية."
         fontFamily="var(--font-display-ar), sans-serif"
       >
-        <InvertButton href="#shop" accentColor={arm.accent}>تسوق الآن</InvertButton>
-        <GhostButton href="/ar/adapt-at-your-service" textColor={arm.textColor}>كيّف قطعتك</GhostButton>
+        <SolidButton href="#shop" color={arm.accent}>تسوق الآن</SolidButton>
+        <GhostButton href="/ar/adapt-at-your-service" textColor={arm.accent}>كيّف قطعتك</GhostButton>
       </ArmHero>
 
       {/* ── What is Antami? ───────────────────────────────────── */}
-      <section className="py-20" style={{ backgroundColor: arm.color }} aria-labelledby="about-heading">
+      <section className="py-20 bg-white" aria-labelledby="about-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <GlassCard className="p-8 max-w-3xl mx-auto">
-            <h2 id="about-heading" className="text-3xl sm:text-4xl mb-6 text-white text-center" style={{ fontFamily: "var(--font-display-ar), sans-serif" }}>
-              أنتامي تعني الانتماء
+          <GlassCard light className="p-8 max-w-3xl mx-auto">
+            <h2 id="about-heading" className="text-3xl sm:text-4xl mb-6 text-center" style={{ fontFamily: "var(--font-display-ar), sans-serif", color: arm.accent }}>
+              أنتمي تعني الانتماء
             </h2>
-            <p className="text-white/85 leading-relaxed mb-4">
-              أنتامي (وتعني الإلهام والشغف والانتماء) منظومة متكاملة صُممت لدعم أصحاب الهمم وأسرهم ومقدمي الرعاية ومقدمي الخدمات.
+            <p className="text-[#2d2d2d] leading-relaxed mb-4">
+              أنتمي (وتعني الإلهام والشغف والانتماء) منظومة متكاملة صُممت لدعم أصحاب الهمم وأسرهم ومقدمي الرعاية ومقدمي الخدمات.
             </p>
-            <p className="text-white/85 leading-relaxed">
+            <p className="text-[#2d2d2d] leading-relaxed">
               نتجاوز التوعية إلى وصول حقيقي وكرامة حقيقية ومشاركة هادفة، انطلاقًا من إيماننا بأن الانتماء يجب أن يكون جزءًا طبيعيًا من الحياة اليومية.
             </p>
           </GlassCard>
@@ -111,7 +111,7 @@ export default function AdaptiveClothingPage() {
             <GradientText>تسوق المجموعة</GradientText>
           </h2>
           <p className="text-center text-[#5a5a5a] mb-12 max-w-xl mx-auto">
-            نموذج أولي يوضح شكل مجموعتنا المتكيفة للنساء والرجال.
+            نموذج أولي يوضح شكل مجموعتنا المكيّفة للنساء والرجال.
           </p>
 
           <h3 className="text-xl font-semibold text-[#2d2d2d] mb-5">مجموعة النساء</h3>
@@ -170,7 +170,7 @@ export default function AdaptiveClothingPage() {
           <GradientText>هذا عن المجتمع، والاستقلالية، والفرصة.</GradientText>&rdquo;
         </h2>
         <p className="text-white/60 leading-relaxed max-w-2xl mx-auto">
-          أنتامي منظومة متكاملة صُممت لدعم أصحاب الهمم وأسرهم ومقدمي الرعاية ومقدمي الخدمات، إذ تتجاوز التوعية إلى وصول حقيقي وكرامة حقيقية ومشاركة هادفة.
+          أنتمي منظومة متكاملة صُممت لدعم أصحاب الهمم وأسرهم ومقدمي الرعاية ومقدمي الخدمات، إذ تتجاوز التوعية إلى وصول حقيقي وكرامة حقيقية ومشاركة هادفة.
         </p>
       </SectionBanner>
 
@@ -185,7 +185,7 @@ export default function AdaptiveClothingPage() {
             <GradientText>كيف تسير العملية</GradientText>
           </h2>
           <p className="text-center text-[#5a5a5a] mb-12 max-w-xl mx-auto">
-            خدمة التكييف حسب طلبك تجعل الحصول على ملابس متكيفة أمرًا بسيطًا.
+            خدمة التكييف حسب طلبك تجعل الحصول على ملابس مكيّفة أمرًا بسيطًا.
           </p>
           <StepFlow steps={steps} />
           <div className="text-center mt-12">

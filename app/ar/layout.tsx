@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Tajawal, El_Messiri } from "next/font/google";
 import "../globals.css";
 import { Nav } from "@/components/Nav";
@@ -17,17 +17,17 @@ const elMessiri = El_Messiri({
 });
 
 export const metadata: Metadata = {
-  title: "أنتامي: الانتماء للجميع",
+  title: "أنتمي: الانتماء للجميع",
   description:
-    "أنتامي مظلة إماراتية لأصحاب الهمم: أكاديمية أنتامي، تطبيق لمقدمي الرعاية، ملابس متكيفة، وسوق POD، كلها في مكان واحد مبني على الكرامة.",
+    "أنتمي مظلة إماراتية لأصحاب الهمم: أكاديمية أنتمي، تطبيق لمقدمي الرعاية، ملابس مكيّفة، وسوق POD، كلها في مكان واحد مبني على الكرامة.",
   metadataBase: new URL("https://antami.ae"),
   alternates: {
     languages: { en: "/", ar: "/ar" },
   },
   openGraph: {
-    title: "أنتامي: الانتماء للجميع",
+    title: "أنتمي: الانتماء للجميع",
     description: "علامة إماراتية مبنية للحياة الواقعية، والكرامة الحقيقية، والانتماء الحقيقي.",
-    images: [{ url: "/logos/logo-light.png", width: 1200, height: 630, alt: "شعار أنتامي" }],
+    images: [{ url: "/logos/logo-light.png", width: 1200, height: 630, alt: "شعار أنتمي" }],
     locale: "ar_AE",
     type: "website",
   },
@@ -50,7 +50,7 @@ export default function ArabicRootLayout({
       <body className="min-h-full flex flex-col">
         <a href="#main-content" className="skip-link">تخطَّ إلى المحتوى الرئيسي</a>
         <Nav locale="ar" />
-        <main id="main-content" className="flex-1 pt-20 md:pt-[136px]" tabIndex={-1}>
+        <main id="main-content" className="flex-1 pt-[88px]" tabIndex={-1}>
           {children}
         </main>
         <Footer locale="ar" />

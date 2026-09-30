@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { GradientText } from "@/components/GradientText";
 import { ProductCard } from "@/components/ProductCard";
 import { GradientButton } from "@/components/GradientButton";
 
 export const metadata: Metadata = {
-  title: "الكندورات المتكيفة | أنتامي",
+  title: "الكندورات المكيّفة | أنتمي",
   description:
     "كندورات تقليدية أُعيد تصميمها لتسهيل الحركة، مع إغلاقات سهلة الاستخدام واستقلالية أكبر.",
 };
@@ -23,11 +23,11 @@ export default function AdaptiveKandourasPage() {
               className="text-4xl sm:text-5xl"
               style={{ fontFamily: "var(--font-display-ar), sans-serif" }}
             >
-              <GradientText>الكندورات المتكيفة</GradientText>
+              <GradientText>الكندورات المكيّفة</GradientText>
             </h1>
           </div>
           <p className="text-[#5a5a5a] text-lg max-w-xl">
-            كندورات تقليدية أُعيد تصميمها لتسهيل الحركة والارتداء. إغلاقات مغناطيسية، وفتحات سهلة الوصول، متكيفة مع الحياة اليومية.
+            كندورات تقليدية أُعيد تصميمها لتسهيل الحركة والارتداء. إغلاقات مغناطيسية، وفتحات سهلة الوصول، مكيّفة مع الحياة اليومية.
           </p>
         </div>
       </section>
@@ -46,7 +46,7 @@ export default function AdaptiveKandourasPage() {
                 قريبًا
               </h2>
               <p className="text-[#5a5a5a] mb-8 max-w-md mx-auto">
-                مجموعة الكندورات المتكيفة لدينا قيد التصنيع بعناية. كن أول من يعلم عند إطلاقها.
+                مجموعة الكندورات المكيّفة لدينا قيد التصنيع بعناية. كن أول من يعلم عند إطلاقها.
               </p>
               <GradientButton href="/ar/contact">أبلغني</GradientButton>
             </div>

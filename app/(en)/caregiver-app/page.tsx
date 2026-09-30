@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { ArmHero } from "@/components/ArmHero";
-import { GradientButton } from "@/components/GradientButton";
 import { GhostButton } from "@/components/GhostButton";
-import { InvertButton } from "@/components/InvertButton";
+import { SolidButton } from "@/components/SolidButton";
 import { GlassCard } from "@/components/GlassCard";
 import { arms } from "@/lib/arms";
 
@@ -32,28 +31,28 @@ export default function CaregiverAppPage() {
     <>
       <ArmHero
         color={arm.color}
-        textColor={arm.textColor}
+        accent={arm.accent}
         name={arm.label}
         tagline="Trusted care, booked in a few taps"
         description="An application built to connect people of determination and their families with vetted caregiver and maid services, whenever they're needed."
       >
-        <InvertButton href="/contact" accentColor={arm.accent}>Be the first to know</InvertButton>
-        <GhostButton href="/contact" textColor={arm.textColor}>Register as a caregiver</GhostButton>
+        <SolidButton href="/contact" color={arm.accent}>Be the first to know</SolidButton>
+        <GhostButton href="/contact" textColor={arm.accent}>Register as a caregiver</GhostButton>
       </ArmHero>
 
-      <section className="py-20" style={{ backgroundColor: arm.color }} aria-labelledby="who-heading">
+      <section className="py-20 bg-white" aria-labelledby="who-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2
             id="who-heading"
-            className="text-3xl sm:text-4xl mb-10 text-center text-white"
-            style={{ fontFamily: "Helony, Georgia, serif" }}
+            className="text-3xl sm:text-4xl mb-10 text-center"
+            style={{ fontFamily: "Helony, Georgia, serif", color: arm.accent }}
           >
             Who it&rsquo;s for
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {whoFor.map((w) => (
-              <GlassCard key={w}>
-                <p className="text-white leading-relaxed font-medium">{w}</p>
+              <GlassCard key={w} light>
+                <p className="text-[#2d2d2d] leading-relaxed font-medium">{w}</p>
               </GlassCard>
             ))}
           </div>
@@ -110,7 +109,7 @@ export default function CaregiverAppPage() {
           <p className="text-white/60 leading-relaxed mb-8">
             Leave your details and we&rsquo;ll let you know the moment it&rsquo;s ready to book your first visit.
           </p>
-          <GradientButton href="/contact">Notify me</GradientButton>
+          <SolidButton href="/contact" color={arm.accent}>Notify me</SolidButton>
         </div>
       </section>
     </>

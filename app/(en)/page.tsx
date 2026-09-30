@@ -19,7 +19,7 @@ export default function HomePage() {
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section
-        className="relative min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-9rem)] flex items-center bg-[#f9fafa] overflow-hidden"
+        className="relative min-h-[calc(100vh-88px)] flex items-center bg-[#f9fafa] overflow-hidden"
         aria-labelledby="hero-heading"
       >
         <div
