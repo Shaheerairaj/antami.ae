@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { ArmHero } from "@/components/ArmHero";
-import { GradientButton } from "@/components/GradientButton";
 import { GhostButton } from "@/components/GhostButton";
-import { InvertButton } from "@/components/InvertButton";
+import { SolidButton } from "@/components/SolidButton";
 import { ProductCard } from "@/components/ProductCard";
 import { arms } from "@/lib/arms";
 
@@ -35,21 +34,21 @@ export default function MarketplacePage() {
     <>
       <ArmHero
         color={arm.color}
-        textColor={arm.textColor}
+        accent={arm.accent}
         name={arm.label}
         tagline="Built by people of determination, for the world"
         description="Set up your own shop, list what you make, and sell to anyone, anywhere. This is a proof of concept: shops and items below are examples."
       >
-        <InvertButton href="/contact" accentColor={arm.accent}>Open your shop</InvertButton>
-        <GhostButton href="#items" textColor={arm.textColor}>Browse items</GhostButton>
+        <SolidButton href="/contact" color={arm.accent}>Open your shop</SolidButton>
+        <GhostButton href="#items" textColor={arm.accent}>Browse items</GhostButton>
       </ArmHero>
 
-      <section className="py-20" style={{ backgroundColor: arm.color }} aria-labelledby="shops-heading">
+      <section className="py-20 bg-white" aria-labelledby="shops-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2
             id="shops-heading"
-            className="text-3xl sm:text-4xl mb-10 text-center text-white"
-            style={{ fontFamily: "Helony, Georgia, serif" }}
+            className="text-3xl sm:text-4xl mb-10 text-center"
+            style={{ fontFamily: "Helony, Georgia, serif", color: arm.accent }}
           >
             Featured shops
           </h2>
@@ -57,18 +56,18 @@ export default function MarketplacePage() {
             {shops.map((shop) => (
               <div
                 key={shop.name}
-                className="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6 flex flex-col items-center text-center gap-3"
+                className="bg-black/5 border border-black/10 rounded-2xl p-6 flex flex-col items-center text-center gap-3"
               >
                 <div
                   className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-semibold text-white flex-shrink-0"
-                  style={{ backgroundColor: "#1a1a2e" }}
+                  style={{ backgroundColor: arm.accent }}
                   aria-hidden="true"
                 >
                   {shop.initial}
                 </div>
-                <h3 className="font-semibold text-white">{shop.name}</h3>
-                <p className="text-white/70 text-sm">{shop.tagline}</p>
-                <p className="text-white/50 text-xs">{shop.items} items</p>
+                <h3 className="font-semibold text-[#2d2d2d]">{shop.name}</h3>
+                <p className="text-[#5a5a5a] text-sm">{shop.tagline}</p>
+                <p className="text-[#5a5a5a]/70 text-xs">{shop.items} items</p>
               </div>
             ))}
           </div>
@@ -116,7 +115,7 @@ export default function MarketplacePage() {
           <p className="text-white/60 leading-relaxed mb-8">
             Tell us about your shop and we&rsquo;ll help you get set up on the marketplace.
           </p>
-          <GradientButton href="/contact">Open your shop</GradientButton>
+          <SolidButton href="/contact" color={arm.accent}>Open your shop</SolidButton>
         </div>
       </section>
     </>

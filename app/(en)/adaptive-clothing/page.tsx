@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ArmHero } from "@/components/ArmHero";
 import { GradientButton } from "@/components/GradientButton";
 import { GhostButton } from "@/components/GhostButton";
-import { InvertButton } from "@/components/InvertButton";
+import { SolidButton } from "@/components/SolidButton";
 import { GlassCard } from "@/components/GlassCard";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ProductCard } from "@/components/ProductCard";
@@ -68,26 +68,26 @@ export default function AdaptiveClothingPage() {
     <>
       <ArmHero
         color={arm.color}
-        textColor={arm.textColor}
+        accent={arm.accent}
         name={arm.label}
         tagline="Where Belonging is for Everyone"
         description="The first Emirati adaptive clothing brand, designed for real life, real comfort, and real dignity."
       >
-        <InvertButton href="#shop" accentColor={arm.accent}>Shop Now</InvertButton>
-        <GhostButton href="/adapt-at-your-service" textColor={arm.textColor}>Adapt My Item</GhostButton>
+        <SolidButton href="#shop" color={arm.accent}>Shop Now</SolidButton>
+        <GhostButton href="/adapt-at-your-service" textColor={arm.accent}>Adapt My Item</GhostButton>
       </ArmHero>
 
       {/* ── What is Antami? ───────────────────────────────────── */}
-      <section className="py-20" style={{ backgroundColor: arm.color }} aria-labelledby="about-heading">
+      <section className="py-20 bg-white" aria-labelledby="about-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <GlassCard className="p-8 max-w-3xl mx-auto">
-            <h2 id="about-heading" className="text-3xl sm:text-4xl mb-6 text-white text-center" style={{ fontFamily: "Helony, Georgia, serif" }}>
+          <GlassCard light className="p-8 max-w-3xl mx-auto">
+            <h2 id="about-heading" className="text-3xl sm:text-4xl mb-6 text-center" style={{ fontFamily: "Helony, Georgia, serif", color: arm.accent }}>
               Antami means belonging
             </h2>
-            <p className="text-white/85 leading-relaxed mb-4">
+            <p className="text-[#2d2d2d] leading-relaxed mb-4">
               Antami (meaning inspiration, passion, and belonging) is a connected ecosystem created to support individuals with special needs, their families, caregivers, and service providers.
             </p>
-            <p className="text-white/85 leading-relaxed">
+            <p className="text-[#2d2d2d] leading-relaxed">
               We move inclusion beyond awareness into real access, dignity, and meaningful participation. Built on the belief that belonging should be a natural part of everyday life.
             </p>
           </GlassCard>

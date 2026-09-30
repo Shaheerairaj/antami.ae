@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -23,7 +23,7 @@ const personas: Persona[] = [
       "إيجاد مجتمع",
     ],
     ctas: [
-      { label: "اكتشف أنتامي", href: "/ar/about", primary: true },
+      { label: "اكتشف أنتمي", href: "/ar/about", primary: true },
       { label: "تحدث معنا", href: "/ar/contact" },
     ],
   },
@@ -34,7 +34,7 @@ const personas: Persona[] = [
       "سواء كنت أمًا أو أبًا أو أخًا أو مقدم رعاية لمن تحب، ستجد المعرفة والمنتجات والأشخاص الذين يفهمون.",
     subItems: ["أم", "أب", "أخ أو أخت", "مقدم رعاية"],
     ctas: [
-      { label: "اكتشف أنتامي", href: "/ar/about", primary: true },
+      { label: "اكتشف أنتمي", href: "/ar/about", primary: true },
       { label: "تواصل معنا", href: "/ar/contact" },
     ],
   },
@@ -45,7 +45,7 @@ const personas: Persona[] = [
       "زوّد نفسك ومن تخدمهم بموارد ومنتجات وتدريب احترافي، مصمم مع متخصصين.",
     subItems: ["طبيب", "ممرض", "معالج", "أخصائي"],
     ctas: [
-      { label: "اكتشف أنتامي", href: "/ar/about", primary: true },
+      { label: "اكتشف أنتمي", href: "/ar/about", primary: true },
       { label: "تحدث مع فريقنا", href: "/ar/contact" },
     ],
   },
@@ -62,8 +62,8 @@ const personas: Persona[] = [
       "ساعات صديقة للتوحد في المتاحف",
     ],
     ctas: [
-      { label: "كن شريكًا لأنتامي", href: "/ar/contact", primary: true },
-      { label: "اكتشف أنتامي", href: "/ar/about" },
+      { label: "كن شريكًا لأنتمي", href: "/ar/contact", primary: true },
+      { label: "اكتشف أنتمي", href: "/ar/about" },
     ],
   },
 ];

@@ -116,29 +116,6 @@ html[dir="rtl"] .font-display {
   background: var(--gradient);
 }
 
-/* ── Chrome-style browser tabs ───────────────────────────── */
-.chrome-tab {
-  position: relative;
-  background: var(--tab-color);
-  border-radius: 14px 14px 0 0;
-}
-.chrome-tab::before,
-.chrome-tab::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 14px;
-  height: 14px;
-}
-.chrome-tab::before {
-  left: -14px;
-  background: radial-gradient(circle at top left, transparent 13.5px, var(--tab-color) 14.5px);
-}
-.chrome-tab::after {
-  right: -14px;
-  background: radial-gradient(circle at top right, transparent 13.5px, var(--tab-color) 14.5px);
-}
-
 /* ── Skip link ───────────────────────────────────────────── */
 .skip-link {
   position: absolute;

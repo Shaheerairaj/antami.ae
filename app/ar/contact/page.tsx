@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { GradientText } from "@/components/GradientText";
 import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "تواصل معنا | أنتامي",
+  title: "تواصل معنا | أنتمي",
   description:
-    "تواصل مع فريق أنتامي. نحن هنا لمساعدتك في أسئلة الملابس المتكيفة، واستفسارات الخدمات، وأي شيء آخر.",
+    "تواصل مع فريق أنتمي. نحن هنا لمساعدتك في أسئلة الملابس المكيّفة، واستفسارات الخدمات، وأي شيء آخر.",
 };
 
 export default function ContactPage() {
@@ -21,7 +21,7 @@ export default function ContactPage() {
             <GradientText>تواصل معنا</GradientText>
           </h1>
           <p className="text-[#5a5a5a] text-lg max-w-md mx-auto">
-            فريق أنتامي هنا لمساعدتك، سواء كنت مهتمًا بمنتج، أو تحتاج إلى دعم، أو ترغب في معرفة المزيد.
+            فريق أنتمي هنا لمساعدتك، سواء كنت مهتمًا بمنتج، أو تحتاج إلى دعم، أو ترغب في معرفة المزيد.
           </p>
         </div>
       </section>

@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { GradientText } from "@/components/GradientText";
 import { StepFlow } from "@/components/StepFlow";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { AdaptationForm } from "./AdaptationForm";
 
 export const metadata: Metadata = {
-  title: "التكييف حسب طلبك | أنتامي",
+  title: "التكييف حسب طلبك | أنتمي",
   description:
     "أرسل لنا قطعتك المفضلة وسنكيّفها لتمنحك الراحة والاستقلالية والكرامة. أو اختر قطعة جديدة وسنكيّفها لك.",
 };

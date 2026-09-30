@@ -1,11 +1,11 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 import { localizeHref, type Locale } from "@/lib/arms";
 
 const shopLinks = [
-  { href: "/adaptive-clothing", label: "Adaptive Clothing", labelAr: "الملابس المتكيفة" },
-  { href: "/shop/adaptive-abayas", label: "Adaptive Abayas", labelAr: "العبايات المتكيفة" },
-  { href: "/shop/adaptive-kandouras", label: "Kandouras", labelAr: "الكندورات المتكيفة" },
+  { href: "/adaptive-clothing", label: "Adaptive Clothing", labelAr: "الملابس المكيّفة" },
+  { href: "/shop/adaptive-abayas", label: "Adaptive Abayas", labelAr: "العبايات المكيّفة" },
+  { href: "/shop/adaptive-kandouras", label: "Kandouras", labelAr: "الكندورات المكيّفة" },
   { href: "/shop/accessories", label: "Embedded Accessories", labelAr: "الإكسسوارات المدمجة" },
 ];
 
@@ -46,7 +46,7 @@ export function Footer({ locale = "en" }: Props) {
               {locale === "ar" ? (
                 <>
                   الانتماء للجميع.
-                  <br />أول علامة إماراتية للملابس المتكيفة.
+                  <br />أول علامة إماراتية للملابس المكيّفة.
                 </>
               ) : (
                 <>
@@ -118,10 +118,10 @@ export function Footer({ locale = "en" }: Props) {
 
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-xs">
-            {locale === "ar" ? "© 2026 أنتامي. جميع الحقوق محفوظة." : "© 2026 Antami. All rights reserved."}
+            {locale === "ar" ? "© 2026 أنتمي. جميع الحقوق محفوظة." : "© 2026 Antami. All rights reserved."}
           </p>
           <p className="text-white/40 text-xs">
-            {locale === "ar" ? "علامة إماراتية للملابس المتكيفة" : "UAE-based adaptive clothing brand"}
+            {locale === "ar" ? "علامة إماراتية للملابس المكيّفة" : "UAE-based adaptive clothing brand"}
           </p>
         </div>
       </div>

@@ -37,7 +37,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <Nav locale="en" />
-        <main id="main-content" className="flex-1 pt-20 md:pt-[136px]" tabIndex={-1}>
+        <main id="main-content" className="flex-1 pt-[88px]" tabIndex={-1}>
           {children}
         </main>
         <Footer locale="en" />

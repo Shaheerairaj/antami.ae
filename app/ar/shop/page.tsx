@@ -1,24 +1,24 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { GradientText } from "@/components/GradientText";
 
 export const metadata: Metadata = {
-  title: "تسوق الملابس المتكيفة | أنتامي",
+  title: "تسوق الملابس المكيّفة | أنتمي",
   description:
-    "تصفّح مجموعة أنتامي من العبايات والكندورات المتكيفة والإكسسوارات المصممة لحياة حقيقية وكرامة حقيقية.",
+    "تصفّح مجموعة أنتمي من العبايات والكندورات المكيّفة والإكسسوارات المصممة لحياة حقيقية وكرامة حقيقية.",
 };
 
 const categories = [
   {
     href: "/ar/shop/adaptive-abayas",
-    title: "العبايات المتكيفة",
+    title: "العبايات المكيّفة",
     description: "عبايات مصممة بأناقة ومكيّفة من أجل الراحة وسهولة الحركة والاستقلالية.",
     color: "#01efac",
     textColor: "#1a1a2e",
   },
   {
     href: "/ar/shop/adaptive-kandouras",
-    title: "الكندورات المتكيفة",
+    title: "الكندورات المكيّفة",
     description: "كندورات تقليدية أُعيد تصميمها بإغلاقات مغناطيسية وخيارات فتحة خلفية وتثبيتات سهلة الاستخدام.",
     color: "#2082a6",
     textColor: "#ffffff",
@@ -49,10 +49,10 @@ export default function ShopPage() {
             className="text-4xl sm:text-5xl mb-4"
             style={{ fontFamily: "var(--font-display-ar), sans-serif" }}
           >
-            <GradientText>تسوق الملابس المتكيفة</GradientText>
+            <GradientText>تسوق الملابس المكيّفة</GradientText>
           </h1>
           <p className="text-[#5a5a5a] text-lg max-w-xl mx-auto">
-            أول علامة إماراتية للملابس المتكيفة، صُممت لحياة حقيقية وراحة حقيقية وكرامة حقيقية.
+            أول علامة إماراتية للملابس المكيّفة، صُممت لحياة حقيقية وراحة حقيقية وكرامة حقيقية.
           </p>
         </div>
       </section>
